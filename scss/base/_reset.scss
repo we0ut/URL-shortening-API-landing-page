@@ -54,6 +54,7 @@ select {
   html:focus-within {
     scroll-behavior: auto;
   }
+
   *,
   *::before,
   *::after {
@@ -63,26 +64,3 @@ select {
     scroll-behavior: auto !important;
   }
 }
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 2rem;
-}
-.header__nav {
-  display: none;
-}
-.header__btn {
-  border: none;
-  font-size: 3.2rem;
-  background-color: #fff;
-  color: hsl(257, 7%, 63%);
-}
-
-.s-main {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-}/*# sourceMappingURL=style.css.map */
