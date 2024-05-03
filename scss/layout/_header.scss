@@ -1,0 +1,17 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+
+  &__nav {
+    display: none;
+  }
+
+  &__btn {
+    border: none;
+    font-size: 3.2rem;
+    background-color: #fff;
+    color: $neutral-grayish-violet-800;
+  }
+}
