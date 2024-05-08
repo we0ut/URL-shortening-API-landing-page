@@ -4,4 +4,59 @@
   justify-content: center;
   align-items: center;
   gap: 2rem;
+  position: relative;
+  padding-bottom: 18rem;
+
+  &__info {
+    &-heading {
+      color: $neutral-very-dark-blue-100;
+    }
+    &-text {
+      color: $neutral-grayish-violet-800;
+    }
+    &-btn {
+      border: none;
+      background-color: $primary-cyan-900;
+      color: #fff;
+      padding: 2rem;
+      border-radius: 50px;
+    }
+  }
+
+  &__form {
+    background-image: url(/images/bg-shorten-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: $primary-dark-violet-100;
+    padding: 2.4rem;
+    border-radius: 11px;
+    font-size: 1.6rem;
+
+    position: absolute;
+    bottom: 0;
+    transform: translateY(50%);
+    &-box {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1.6rem;
+    }
+    &-input {
+      padding: 2rem;
+      background-color: #fff;
+      border-radius: 9px;
+      border: none;
+      color: $neutral-gray-900;
+    }
+    &-btn {
+      cursor: pointer;
+      border: none;
+      border-radius: 9px;
+      background-color: $primary-cyan-900;
+      color: #fff;
+      width: 100%;
+      padding: 1.8rem;
+    }
+  }
 }
