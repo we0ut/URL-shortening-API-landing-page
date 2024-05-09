@@ -7,11 +7,33 @@
   background-color: $neutral-dark-violet-100;
   padding: 5rem 0 5rem 0;
 
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+
+    @media (min-width: 768px) {
+      max-width: 120rem;
+      flex-direction: row;
+      align-items: start;
+    }
+  }
+
   &__heading {
     font-size: 3.6rem;
     color: #fff;
     font-weight: 700;
     letter-spacing: 0.25px;
+
+    @media (min-width: 768px) {
+      margin-right: auto;
+    }
   }
 
   &__links {
@@ -21,12 +43,21 @@
     flex-direction: column;
     gap: 4rem;
 
+    @media (min-width: 768px) {
+      flex-direction: row;
+      align-items: start;
+    }
+
     &-box {
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
       gap: 3rem;
+
+      @media (min-width: 768px) {
+        align-items: start;
+      }
 
       &-heading {
         font-size: 1.8rem;
@@ -40,6 +71,10 @@
         align-items: center;
         flex-direction: column;
         gap: 2rem;
+
+        @media (min-width: 768px) {
+          align-items: start;
+        }
 
         &-link {
           font-size: 1.8rem;

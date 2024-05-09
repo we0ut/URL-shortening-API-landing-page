@@ -7,6 +7,12 @@
   position: relative;
   padding-bottom: 18rem;
 
+  @media (min-width: 768px) {
+    margin: 0 auto;
+    flex-direction: row-reverse;
+    max-width: 120rem;
+  }
+
   &__info {
     display: flex;
     justify-content: center;
@@ -16,12 +22,22 @@
     padding: 3rem;
     padding-bottom: 0;
 
+    @media (min-width: 768px) {
+      align-items: start;
+    }
+
     &-heading {
       color: $neutral-very-dark-blue-100;
       font-size: 3.6rem;
       font-weight: 700;
       letter-spacing: -0.5px;
       text-align: center;
+
+      @media (min-width: 768px) {
+        font-size: 8rem;
+        text-align: start;
+        letter-spacing: -3px;
+      }
     }
 
     &-text {
@@ -30,6 +46,11 @@
       color: $neutral-grayish-violet-800;
       font-size: 1.8rem;
       font-weight: 500;
+
+      @media (min-width: 768px) {
+        text-align: start;
+        font-size: 2.4rem;
+      }
     }
 
     &-btn {
@@ -49,20 +70,37 @@
     position: absolute;
     bottom: 0;
     transform: translateY(50%);
+
+    @media (min-width: 768px) {
+      width: 100%;
+      padding: 5rem 6rem 5rem 6rem;
+    }
+
     &-box {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       gap: 1.6rem;
+
+      @media (min-width: 768px) {
+        flex-direction: row;
+      }
     }
+
     &-input {
       padding: 2rem;
       background-color: #fff;
       border-radius: 9px;
       border: none;
       color: $neutral-gray-900;
+
+      @media (min-width: 768px) {
+        width: 100%;
+        max-width: 77rem;
+      }
     }
+
     &-btn {
       cursor: pointer;
       border: none;
@@ -71,6 +109,10 @@
       color: #fff;
       width: 100%;
       padding: 1.8rem;
+
+      @media (min-width: 768px) {
+        max-width: 18rem;
+      }
     }
   }
 }

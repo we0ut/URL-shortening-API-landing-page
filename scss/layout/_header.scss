@@ -3,9 +3,44 @@
   align-items: center;
   justify-content: space-between;
   padding: 2rem;
+  margin: 0 auto;
+
+  @media (min-width: 768px) {
+    justify-content: flex-start;
+    padding: 5rem;
+    gap: 4rem;
+    max-width: 120rem;
+  }
 
   &__nav {
     display: none;
+
+    @media (min-width: 768px) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 3.4rem;
+      flex-direction: row;
+    }
+
+    &-link {
+      font-size: 1.4rem;
+      color: $neutral-grayish-violet-800;
+      display: block;
+
+      &-btn {
+        @include get-started--btn;
+        font-size: 1.4rem;
+        padding: 1.4rem 2rem 1.4rem 2rem;
+      }
+    }
+
+    &-btns {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      gap: 4rem;
+    }
   }
 
   &__btn {
@@ -13,5 +48,9 @@
     font-size: 3.2rem;
     background-color: #fff;
     color: $neutral-grayish-violet-800;
+
+    @media (min-width: 768px) {
+      display: none;
+    }
   }
 }
