@@ -15,11 +15,7 @@
       color: $neutral-grayish-violet-800;
     }
     &-btn {
-      border: none;
-      background-color: $primary-cyan-900;
-      color: #fff;
-      padding: 2rem;
-      border-radius: 50px;
+      @include get-started--btn;
     }
   }
 

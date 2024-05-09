@@ -122,9 +122,11 @@ select {
 }
 .s-main__info-btn {
   border: none;
+  font-size: 1.8rem;
+  font-weight: 600;
   background-color: hsl(180, 66%, 49%);
   color: #fff;
-  padding: 2rem;
+  padding: 2rem 4rem 2rem 4rem;
   border-radius: 50px;
 }
 .s-main__form {
@@ -219,4 +221,62 @@ select {
   padding: 2rem;
   padding-top: 8rem;
   border-radius: 9px;
+}
+
+.s-cta {
+  background-image: url(/images/bg-boost-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: hsl(257, 27%, 26%);
+  padding: 10rem 3rem 9rem 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.s-cta__heading {
+  font-size: 2.6rem;
+  color: #fff;
+}
+.s-cta__btn {
+  border: none;
+  font-size: 1.8rem;
+  font-weight: 600;
+  background-color: hsl(180, 66%, 49%);
+  color: #fff;
+  padding: 2rem 4rem 2rem 4rem;
+  border-radius: 50px;
+}
+
+.s-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  background-color: hsl(260, 8%, 14%);
+}
+.s-footer__links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.s-footer__links-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.s-footer__links-box-link {
+  font-size: 1.8rem;
+  font-weight: 400;
+  letter-spacing: -0.5px;
+  color: hsl(257, 7%, 63%);
+}
+.s-footer__links-heading {
+  font-size: 1.8rem;
+  color: #fff;
+  font-weight: 700;
 }/*# sourceMappingURL=style.css.map */
