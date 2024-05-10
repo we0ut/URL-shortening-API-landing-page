@@ -11,29 +11,11 @@
     flex-direction: row;
   }
 
-  &__box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 5rem;
-
-    @media (min-width: 768px) {
-      max-width: 120rem;
-      flex-direction: row;
-      align-items: start;
-    }
-  }
-
   &__heading {
     font-size: 3.6rem;
     color: #fff;
     font-weight: 700;
     letter-spacing: 0.25px;
-
-    @media (min-width: 768px) {
-      margin-right: auto;
-    }
   }
 
   &__links {
