@@ -26,167 +26,182 @@
   </head>
   <body>
     <header class="header">
-      <a href="#">
-        <img src="images/logo.svg" alt="Company Logo" class="header__logo" />
-      </a>
-      <nav class="header__nav">
-        <a href="#" class="header__nav-link">Features</a>
-        <a href="#" class="header__nav-link">Pricing</a>
-        <a href="#" class="header__nav-link">Resources</a>
-      </nav>
-      <div class="header__nav-btns">
-        <a href="#" class="header__nav-link">Log In</a>
-        <a href="#" class="header__nav-link header__nav-link-btn">Sign Up</a>
+      <div class="container container__header">
+        <a href="#">
+          <img src="images/logo.svg" alt="Company Logo" class="header__logo" />
+        </a>
+        <nav class="header__nav">
+          <a href="#" class="header__nav-link">Features</a>
+          <a href="#" class="header__nav-link">Pricing</a>
+          <a href="#" class="header__nav-link">Resources</a>
+        </nav>
+        <div class="header__nav-btns">
+          <a href="#" class="header__nav-link">Log In</a>
+          <a href="#" class="header__nav-link header__nav-link-btn">Sign Up</a>
+        </div>
+        <button class="header__btn">
+          <ion-icon name="menu-outline"></ion-icon>
+        </button>
       </div>
-      <button class="header__btn">
-        <ion-icon name="menu-outline"></ion-icon>
-      </button>
     </header>
 
     <main>
       <section class="s-main">
-        <img
-          src="images/illustration-working.svg"
-          alt="Person working on a computer"
-          class="s-main__img"
-        />
-
-        <div class="s-main__info">
-          <h1 class="s-main__info-heading">More than just shorter links</h1>
-          <p class="s-main__info-text">
-            Build you brand's recognition and get detailed insights on how your
-            links are performing
-          </p>
-          <button class="s-main__info-btn">Get started</button>
-        </div>
-
-        <div class="s-main__form">
-          <form autocomplete="off" class="s-main__form-box">
-            <label for="address-input" class="sr-only sr-only-focusable">
-              Shorten a link here...
-            </label>
-            <input
-              type="text"
-              id="address-input"
-              placeholder="Shorten a link here..."
-              class="s-main__form-input"
+        <div class="container container__s-main">
+          <div class="s-main__img-container">
+            <img
+              src="images/illustration-working.svg"
+              alt="Person working on a computer"
+              class="s-main__img"
             />
-            <button class="s-main__form-btn">Shorten it!</button>
-          </form>
+          </div>
+
+          <div class="s-main__info">
+            <h1 class="s-main__info-heading">More than just shorter links</h1>
+            <p class="s-main__info-text">
+              Build you brand's recognition and get detailed insights on how
+              your links are performing
+            </p>
+            <button class="s-main__info-btn">Get started</button>
+          </div>
+
+          <div class="s-main__form">
+            <form autocomplete="off" class="s-main__form-box">
+              <label for="address-input" class="sr-only sr-only-focusable">
+                Shorten a link here...
+              </label>
+              <input
+                type="text"
+                id="address-input"
+                placeholder="Shorten a link here..."
+                class="s-main__form-input"
+              />
+              <button class="s-main__form-btn">Shorten it!</button>
+            </form>
+          </div>
         </div>
       </section>
 
       <section class="s-stats">
-        <div class="s-stats__info">
-          <h2 class="s-stats__info-heading-secondary">Advanced Statistics</h2>
-          <p class="s-stats__info-text-secondary">
-            Track how your links are performing across the web with our advanced
-            statistics dashboard
-          </p>
-        </div>
-
-        <div class="s-stats__box">
-          <div class="s-stats__info s-stats__info-box">
-            <img
-              src="images/icon-brand-recognition.svg"
-              alt="Brand recognition icon"
-              class="s-stats__info-img"
-            />
-            <span class="s-stats__info-background"></span>
-            <h2 class="s-stats__info-heading">Brand Recognition</h2>
-            <p class="s-stats__info-text s-stats__info-text-box">
-              Boost your brand recognition with each click. Generic links don't
-              mean a thing. Branded links help instil confidence in your
-              content.
+        <div class="container container__s-stats">
+          <div class="s-stats__info">
+            <h2 class="s-stats__info-heading-secondary">Advanced Statistics</h2>
+            <p class="s-stats__info-text-secondary">
+              Track how your links are performing across the web with our
+              advanced statistics dashboard
             </p>
           </div>
 
-          <div class="s-stats__info s-stats__info-box">
-            <img
-              src="images/icon-detailed-records.svg"
-              alt="Detailed records icon"
-              class="s-stats__info-img"
-            />
-            <span class="s-stats__info-background"></span>
-            <h2 class="s-stats__info-heading">Detailed Records</h2>
-            <p class="s-stats__info-text s-stats__info-text-box">
-              Gain insights into who is clicking your links. Knowing when and
-              where people engage with your content helps inform better
-              decisions.
-            </p>
-          </div>
+          <div class="s-stats__box">
+            <div class="s-stats__info s-stats__info-box margin-bottom">
+              <div class="s-stats__info-background">
+                <img
+                  src="images/icon-brand-recognition.svg"
+                  alt="Brand recognition icon"
+                  class="s-stats__info-img"
+                />
+              </div>
+              <h2 class="s-stats__info-heading">Brand Recognition</h2>
+              <p class="s-stats__info-text s-stats__info-text-box">
+                Boost your brand recognition with each click. Generic links
+                don't mean a thing. Branded links help instil confidence in your
+                content.
+              </p>
+            </div>
 
-          <div class="s-stats__info s-stats__info-box">
-            <img
-              src="images/icon-fully-customizable.svg"
-              alt="Fully Customizable icon"
-              class="s-stats__info-img"
-            />
-            <span class="s-stats__info-background"></span>
-            <h2 class="s-stats__info-heading">Fully Customizable</h2>
-            <p class="s-stats__info-text s-stats__info-text-box">
-              Improve brand awareness and content discoverability thrugh
-              customizable links, supercharging audience engagement.
-            </p>
+            <div class="s-stats__info s-stats__info-box">
+              <div class="s-stats__info-background">
+                <img
+                  src="images/icon-detailed-records.svg"
+                  alt="Detailed records icon"
+                  class="s-stats__info-img"
+                />
+              </div>
+              <h2 class="s-stats__info-heading">Detailed Records</h2>
+              <p class="s-stats__info-text s-stats__info-text-box">
+                Gain insights into who is clicking your links. Knowing when and
+                where people engage with your content helps inform better
+                decisions.
+              </p>
+            </div>
+
+            <div class="s-stats__info s-stats__info-box margin-top">
+              <div class="s-stats__info-background">
+                <img
+                  src="images/icon-fully-customizable.svg"
+                  alt="Fully customizable icon"
+                  class="s-stats__info-img"
+                />
+              </div>
+              <h2 class="s-stats__info-heading">Fully Customizable</h2>
+              <p class="s-stats__info-text s-stats__info-text-box">
+                Improve brand awareness and content discoverability thrugh
+                customizable links, supercharging audience engagement.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
       <section class="s-cta">
-        <h2 class="s-cta__heading">Boost your links today</h2>
-        <button class="s-main__info-btn s-cta__btn">Get started</button>
+        <div class="container container__s-cta">
+          <h2 class="s-cta__heading">Boost your links today</h2>
+          <button class="s-main__info-btn s-cta__btn">Get started</button>
+        </div>
       </section>
     </main>
 
     <footer>
       <div class="s-footer">
-        <h2 class="s-footer__heading">Shortly</h2>
+        <div class="container container__s-footer">
+          <h2 class="s-footer__heading">Shortly</h2>
 
-        <div class="s-footer__links">
-          <div class="s-footer__links-box">
-            <h3 class="s-footer__links-box-heading">Features</h3>
-            <div class="s-footer__links-box-list">
-              <a href="#" class="s-footer__links-box-list-link"
-                >Link shortening</a
-              >
-              <a href="#" class="s-footer__links-box-list-link"
-                >Branded Links</a
-              >
-              <a href="#" class="s-footer__links-box-list-link">Analytics</a>
+          <div class="s-footer__links">
+            <div class="s-footer__links-box">
+              <h3 class="s-footer__links-box-heading">Features</h3>
+              <div class="s-footer__links-box-list">
+                <a href="#" class="s-footer__links-box-list-link"
+                  >Link shortening</a
+                >
+                <a href="#" class="s-footer__links-box-list-link"
+                  >Branded Links</a
+                >
+                <a href="#" class="s-footer__links-box-list-link">Analytics</a>
+              </div>
             </div>
-          </div>
 
-          <div class="s-footer__links-box">
-            <h3 class="s-footer__links-box-heading">Resources</h3>
-            <div class="s-footer__links-box-list">
-              <a href="#" class="s-footer__links-box-list-link">Blog</a>
-              <a href="#" class="s-footer__links-box-list-link">Developers</a>
-              <a href="#" class="s-footer__links-box-list-link">Support</a>
+            <div class="s-footer__links-box">
+              <h3 class="s-footer__links-box-heading">Resources</h3>
+              <div class="s-footer__links-box-list">
+                <a href="#" class="s-footer__links-box-list-link">Blog</a>
+                <a href="#" class="s-footer__links-box-list-link">Developers</a>
+                <a href="#" class="s-footer__links-box-list-link">Support</a>
+              </div>
             </div>
-          </div>
 
-          <div class="s-footer__links-box">
-            <h3 class="s-footer__links-box-heading">Company</h3>
-            <div class="s-footer__links-box-list">
-              <a href="#" class="s-footer__links-box-list-link">About</a>
-              <a href="#" class="s-footer__links-box-list-link">Our Team</a>
-              <a href="#" class="s-footer__links-box-list-link">Careers</a>
-              <a href="#" class="s-footer__links-box-list-link">Contact</a>
+            <div class="s-footer__links-box">
+              <h3 class="s-footer__links-box-heading">Company</h3>
+              <div class="s-footer__links-box-list">
+                <a href="#" class="s-footer__links-box-list-link">About</a>
+                <a href="#" class="s-footer__links-box-list-link">Our Team</a>
+                <a href="#" class="s-footer__links-box-list-link">Careers</a>
+                <a href="#" class="s-footer__links-box-list-link">Contact</a>
+              </div>
             </div>
-          </div>
-          <div class="s-footer__links-icons">
-            <a href="#" class="s-footer__links-icons-link">
-              <img src="images/icon-facebook.svg" alt="Facebook icon" />
-            </a>
-            <a href="#" class="s-footer__links-icons-link">
-              <img src="images/icon-twitter.svg" alt="Twitter icon" />
-            </a>
-            <a href="#" class="s-footer__links-icons-link">
-              <img src="images/icon-pinterest.svg" alt="Pinterest icon" />
-            </a>
-            <a href="#" class="s-footer__links-icons-link">
-              <img src="images/icon-instagram.svg" alt="Instagram icon" />
-            </a>
+            <div class="s-footer__links-icons">
+              <a href="#" class="s-footer__links-icons-link">
+                <img src="images/icon-facebook.svg" alt="Facebook icon" />
+              </a>
+              <a href="#" class="s-footer__links-icons-link">
+                <img src="images/icon-twitter.svg" alt="Twitter icon" />
+              </a>
+              <a href="#" class="s-footer__links-icons-link">
+                <img src="images/icon-pinterest.svg" alt="Pinterest icon" />
+              </a>
+              <a href="#" class="s-footer__links-icons-link">
+                <img src="images/icon-instagram.svg" alt="Instagram icon" />
+              </a>
+            </div>
           </div>
         </div>
       </div>
