@@ -135,7 +135,6 @@ select {
 }
 .header__nav-btns {
   margin-left: auto;
-  display: flex;
   align-items: center;
   gap: 4rem;
   display: none;
