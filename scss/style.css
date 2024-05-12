@@ -152,7 +152,7 @@ select {
 .s-main__img {
   position: absolute;
   width: 100%;
-  transform: translateY(-50%);
+  transform: translateY(-50%) scale(1.3);
 }
 .s-main__img-container {
   position: relative;
@@ -224,6 +224,7 @@ select {
 }
 @media (min-width: 768px) {
   .s-main__form {
+    background-image: url(/images/bg-shorten-desktop.svg);
     max-width: 120rem;
     width: 100%;
     padding: 5rem 6rem 5rem 6rem;
@@ -239,6 +240,8 @@ select {
 @media (min-width: 768px) {
   .s-main__form-box {
     flex-direction: row;
+    gap: 2.6rem;
+    align-items: stretch;
   }
 }
 .s-main__form-input {
@@ -251,7 +254,8 @@ select {
 @media (min-width: 768px) {
   .s-main__form-input {
     width: 100%;
-    max-width: 77rem;
+    max-width: 80rem;
+    padding-inline: 3rem;
   }
 }
 .s-main__form-btn {
@@ -281,11 +285,52 @@ select {
   justify-content: center;
   flex-direction: column;
   gap: 9rem;
+  position: relative;
 }
 @media (min-width: 768px) {
   .s-stats__box {
     flex-direction: row;
     gap: 3rem;
+  }
+}
+.s-stats__box-line {
+  height: 1rem;
+  width: 5rem;
+  background-color: hsl(180, 66%, 49%);
+  position: absolute;
+  transform: rotate(90deg);
+  top: 29rem;
+}
+@media (min-width: 768px) {
+  .s-stats__box-line {
+    width: 3rem;
+    transform: rotate(0);
+  }
+}
+@media (min-width: 768px) {
+  .s-stats__box-line {
+    left: 35rem;
+    top: 40%;
+  }
+}
+.s-stats__box-line--right {
+  height: 1rem;
+  width: 5rem;
+  background-color: hsl(180, 66%, 49%);
+  position: absolute;
+  transform: rotate(90deg);
+  bottom: 33rem;
+}
+@media (min-width: 768px) {
+  .s-stats__box-line--right {
+    width: 3rem;
+    transform: rotate(0);
+  }
+}
+@media (min-width: 768px) {
+  .s-stats__box-line--right {
+    right: 35rem;
+    bottom: 59%;
   }
 }
 .s-stats__info {
@@ -365,6 +410,7 @@ select {
 }
 @media (min-width: 768px) {
   .s-stats__info-box {
+    width: 35rem;
     padding: 8rem 4rem 4rem 4rem;
     align-items: start;
   }
@@ -384,6 +430,7 @@ select {
 }
 @media (min-width: 768px) {
   .s-cta {
+    background-image: url(/images/bg-boost-desktop.svg);
     gap: 2.8rem;
   }
 }
@@ -549,12 +596,16 @@ select {
 
 @media (min-width: 768px) {
   .margin-top {
-    margin-top: 4.4rem;
+    margin-top: 10rem;
   }
 }
 
 @media (min-width: 768px) {
   .margin-bottom {
-    margin-bottom: 4.4rem;
+    margin-bottom: 10rem;
   }
+}
+
+.right {
+  right: 35rem;
 }/*# sourceMappingURL=style.css.map */
