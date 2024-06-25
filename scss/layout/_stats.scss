@@ -5,6 +5,68 @@
   padding-top: 18rem;
   padding-bottom: 8rem;
 
+  &__links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border-radius: 11px;
+    font-size: 2rem;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+      padding: 2rem;
+    }
+
+    &-original {
+      padding: 1.6rem;
+      border-bottom: 1px solid $neutral-gray-900;
+      color: $primary-dark-violet-100;
+
+      @media (min-width: 768px) {
+        border-bottom: none;
+      }
+    }
+
+    &-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding-bottom: 1.6rem;
+
+      @media (min-width: 768px) {
+        padding-bottom: 0;
+        flex-direction: row;
+      }
+
+      &-shorten {
+        color: $primary-cyan-900;
+        padding: 1.6rem;
+      }
+
+      &-btn {
+        width: 100%;
+        max-width: 27.6rem;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        background-color: $primary-cyan-900;
+        color: white;
+        border-radius: 11px;
+        padding: 1.4rem;
+
+        @media (min-width: 768px) {
+          padding: 2rem 4rem 2rem 4rem;
+        }
+      }
+    }
+  }
+
   &__box {
     display: flex;
     align-items: center;
