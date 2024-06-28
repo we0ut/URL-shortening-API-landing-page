@@ -3,7 +3,7 @@
 const formEl = document.querySelector(".s-main__form-box");
 const inputEl = document.querySelector(".s-main__form-input");
 const containerLinksEl = document.querySelector(".container__links");
-const copyBtnEl = boxEl.querySelector(".s-stats__links-box-btn");
+const copyBtnEl = document.querySelector(".s-stats__links-box-btn");
 
 formEl.addEventListener("submit", async function (e) {
   e.preventDefault();
@@ -11,7 +11,6 @@ formEl.addEventListener("submit", async function (e) {
   if (userLink === "") {
     alert("Please enter a valid link");
   } else {
-    console.log(userLink);
     try {
       const shortenedLink = await shortenLink(userLink);
       const formLink = {
@@ -31,17 +30,21 @@ formEl.addEventListener("submit", async function (e) {
 async function shortenLink(link) {
   const response = await fetch("https://cleanuri.com/api/v1/shorten", {
     method: "POST",
+    mode: "no-cors",
     headers: {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({ url: link }),
   });
 
+  console.log(response);
+
   if (!response.ok) {
     throw new Error("Failed to shorten the link");
   }
 
   const data = await response.json();
+  console.log(data);
   return data.result_url;
 }
 
