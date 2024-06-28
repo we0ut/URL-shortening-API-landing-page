@@ -28,22 +28,23 @@ formEl.addEventListener("submit", async function (e) {
 });
 
 async function shortenLink(link) {
-  const response = await fetch("https://cleanuri.com/api/v1/shorten", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({ url: link }),
-  });
-
-  console.log(response);
+  const response = await fetch(
+    "https://corsproxy.io/?" + "https://cleanuri.com/api/v1/shorten",
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+      },
+      body: new URLSearchParams({
+        url: link,
+      }),
+    }
+  );
 
   if (!response.ok) {
     throw new Error("Failed to shorten the link");
   }
-
   const data = await response.json();
-  console.log(data);
   return data.result_url;
 }
 
