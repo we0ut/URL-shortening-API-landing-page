@@ -30,7 +30,6 @@ formEl.addEventListener("submit", async function (e) {
 async function shortenLink(link) {
   const response = await fetch("https://cleanuri.com/api/v1/shorten", {
     method: "POST",
-    mode: "no-cors",
     headers: {
       "Content-Type": "application/json",
     },
@@ -53,7 +52,7 @@ const displayItem = (boxEl, link) => {
     <p class="s-stats__links-original">${link.original}</p>
     <div class="s-stats__links-box">
       <p class="s-stats__links-box-shorten">
-        <a href="${link.shorten}" target="_blank">${link.shorten}</a>
+        ${link.shorten}
       </p>
       <button class="s-stats__links-box-btn">Copy</button>
     </div>
