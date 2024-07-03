@@ -62,6 +62,11 @@
           font-weight: 400;
           letter-spacing: -0.5px;
           color: $neutral-grayish-violet-800;
+          transition: all 0.3s;
+
+          &:hover {
+            color: $primary-cyan-900;
+          }
         }
       }
     }
@@ -71,6 +76,15 @@
       align-items: center;
       justify-content: center;
       gap: 3rem;
+
+      &-link {
+        &-img {
+          &:hover {
+            filter: invert(43%) sepia(41%) saturate(3953%) hue-rotate(141deg)
+              brightness(92%) contrast(91%);
+          }
+        }
+      }
     }
   }
 }

@@ -9,6 +9,8 @@
     align-items: center;
     justify-content: center;
     gap: 2.4rem;
+    width: 100%;
+    max-width: 32rem;
 
     @media (min-width: 768px) {
       width: 100%;

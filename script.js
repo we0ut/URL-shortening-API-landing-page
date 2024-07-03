@@ -3,26 +3,29 @@
 const formEl = document.querySelector(".s-main__form-box");
 const inputEl = document.querySelector(".s-main__form-input");
 const containerLinksEl = document.querySelector(".container__links");
-const copyBtnEl = document.querySelector(".s-stats__links-box-btn");
 
 formEl.addEventListener("submit", async function (e) {
   e.preventDefault();
   const userLink = inputEl.value;
+  const originalPlaceholder = inputEl.placeholder;
   if (userLink === "") {
-    alert("Please enter a valid link");
+    inputEl.classList.add("alert");
+    inputEl.placeholder = "Enter a valid link...";
+    setTimeout(() => {
+      inputEl.classList.remove("alert");
+      inputEl.placeholder = originalPlaceholder;
+    }, 3000);
   } else {
     try {
       const shortenedLink = await shortenLink(userLink);
       const formLink = {
-        original: userLink,
+        original: truncateLink(userLink),
         shorten: shortenedLink,
       };
-      console.log(formLink);
       inputEl.value = "";
       displayItem(containerLinksEl, formLink);
     } catch (error) {
       console.error("Error shortening the link:", error);
-      alert("Failed to shorten the link. Please try again.");
     }
   }
 });
@@ -60,4 +63,44 @@ const displayItem = (boxEl, link) => {
   </div>`;
 
   boxEl.insertAdjacentHTML("afterbegin", html);
+};
+
+containerLinksEl.addEventListener("click", function (e) {
+  if (e.target && e.target.classList.contains("s-stats__links-box-btn")) {
+    const copyBtnEl = e.target;
+    const shortenedLinkEl = copyBtnEl.previousElementSibling;
+    const shortenedLink = shortenedLinkEl.textContent;
+    handleCopyButton(copyBtnEl, shortenedLink);
+  }
+});
+
+const handleCopyButton = (btn, textToCopy) => {
+  navigator.clipboard
+    .writeText(textToCopy)
+    .then(() => {
+      const originalText = btn.textContent;
+      btn.textContent = "Copied";
+      btn.style.backgroundColor = "hsl(257, 27%, 26%)";
+      btn.disabled = true;
+
+      setTimeout(() => {
+        btn.textContent = originalText;
+        btn.style.backgroundColor = "";
+        btn.disabled = false;
+      }, 3000);
+    })
+    .catch((err) => {
+      console.error("Failed to copy text: ", err);
+    });
+};
+
+const truncateLink = (link) => {
+  const mobileMaxLength = 27;
+  const desktopMaxLength = 50;
+  const maxLength =
+    window.innerWidth <= 768 ? mobileMaxLength : desktopMaxLength;
+  if (link.length > maxLength) {
+    return link.slice(0, maxLength) + "...";
+  }
+  return link;
 };

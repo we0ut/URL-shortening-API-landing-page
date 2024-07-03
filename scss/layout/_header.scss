@@ -17,11 +17,22 @@
       font-size: 1.4rem;
       color: $neutral-grayish-violet-800;
       display: block;
+      transition: all 0.3s;
+      font-weight: 600;
+
+      &:hover {
+        color: $neutral-dark-violet-100;
+      }
 
       &-btn {
+        color: $neutral-grayish-violet-800;
         @include get-started--btn;
         font-size: 1.4rem;
         padding: 1.4rem 2rem 1.4rem 2rem;
+
+        &:hover {
+          background-color: $primary-cyan-800;
+        }
       }
     }
 

@@ -22,12 +22,7 @@
 
     &-original {
       padding: 1.6rem;
-      border-bottom: 1px solid $neutral-gray-900;
       color: $primary-dark-violet-100;
-
-      @media (min-width: 768px) {
-        border-bottom: none;
-      }
     }
 
     &-box {
@@ -36,8 +31,10 @@
       align-items: center;
       justify-content: center;
       padding-bottom: 1.6rem;
+      border-top: 1px solid $neutral-gray-900;
 
       @media (min-width: 768px) {
+        border-top: 0;
         padding-bottom: 0;
         flex-direction: row;
       }
@@ -48,17 +45,19 @@
       }
 
       &-btn {
+        @include get-started--btn;
         width: 100%;
         max-width: 27.6rem;
         cursor: pointer;
         display: flex;
         align-items: center;
         justify-content: center;
-        border: none;
-        background-color: $primary-cyan-900;
-        color: white;
         border-radius: 11px;
         padding: 1.4rem;
+
+        &:hover {
+          background-color: $primary-cyan-800;
+        }
 
         @media (min-width: 768px) {
           padding: 2rem 4rem 2rem 4rem;
