@@ -8,9 +8,20 @@ formEl.addEventListener("submit", async function (e) {
   e.preventDefault();
   const userLink = inputEl.value;
   const originalPlaceholder = inputEl.placeholder;
-  if (userLink === "") {
+  const urlPattern = new RegExp(
+    "^(https?:\\/\\/)?" + // protocol
+      "((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|" + // domain name
+      "((\\d{1,3}\\.){3}\\d{1,3}))" + // OR ip (v4) address
+      "(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*" + // port and path
+      "(\\?[;&a-z\\d%_.~+=-]*)?" + // query string
+      "(\\#[-a-z\\d_]*)?$",
+    "i" // fragment locator
+  );
+
+  if (userLink === "" || !urlPattern.test(userLink)) {
     inputEl.classList.add("alert");
     inputEl.placeholder = "Enter a valid link...";
+    inputEl.value = "";
     setTimeout(() => {
       inputEl.classList.remove("alert");
       inputEl.placeholder = originalPlaceholder;
